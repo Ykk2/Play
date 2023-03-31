@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_cors import CORS
 from flask_login import LoginManager
-from .models import db
+from .models import db, User
 
 
 
