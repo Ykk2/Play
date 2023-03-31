@@ -32,6 +32,8 @@ sqlalchemy = "==1.4.19"
 urllib3 = "==1.26.14"
 werkzeug = "==2.0.1"
 wtforms = "==2.3.3"
+flask-security = "*"
+bcrypt = "*"
 
 [dev-packages]
 
