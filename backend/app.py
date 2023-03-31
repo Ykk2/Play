@@ -3,6 +3,8 @@ from flask_cors import CORS
 from flask_login import LoginManager
 from .models import db, User
 
+
+
 app = Flask(__name__, static_folder="../frontend/.next", static_url_path='/')
 
 CORS(app)
