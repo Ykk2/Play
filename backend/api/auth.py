@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from ..models import User, db
-from flask_login import current_user, login_required, login_user, logout_user
+from flask_login import login_required, login_user, logout_user
 from .helpers import format_errors
 from ..forms import LoginForm, SignUpForm
 
