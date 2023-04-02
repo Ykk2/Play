@@ -1,7 +1,10 @@
 
-# formats form errors
+
 
 def format_errors(validation_errors):
+    """
+    formats form errors
+    """
     formatted_errors = {}
     for field, error in validation_errors.items():
         formatted_errors[field] = error

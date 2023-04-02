@@ -2,20 +2,9 @@ import os
 from elasticsearch import Elasticsearch
 
 host = os.environ.get('ELASTICSEARCH_HOST')
-port = os.environ.get('ELASTICSEARCH_PORT')
+port = int(os.environ.get('ELASTICSEARCH_PORT'))
 
-es = Elasticsearch([{'host': host, 'port': port}])
-
-question_index_map = {
-    "properties": {
-        "title": {"type": "text"},
-        "difficulty": {"type": "keyword"},
-        "body": {"type": "text"},
-        "explanation": {"type": "text"}
-    }
-}
-
-es.indices.create(index="question_index", body=question_index_map)
+es = Elasticsearch([{'host': host, 'port': port, "scheme": "https"}])
 
 def search_questions(query):
     body = {
