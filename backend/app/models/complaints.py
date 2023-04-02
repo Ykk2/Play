@@ -6,8 +6,9 @@ class Complaint(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     body = db.Column(db.Text, nullable=False)
-    origin = db.Column(db.String(100), nullable=False, default="general")
-    user_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod("users.id")))
+    origin = db.Column(db.String(100), default="general")
+    user_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod("users.id"), nullable=False), nullable=False)
+    resolved = db.Column(db.Boolean, default=False)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
     user = db.relationship("User", back_populates="Complaint")

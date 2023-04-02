@@ -4,5 +4,5 @@ from .complaints import Complaint
 from .concepts import Concept
 from .figures import Figure
 from .questions import Question
-from .relationships import question_concept_association
+from .question_concept import question_concept_association
 from .users import User

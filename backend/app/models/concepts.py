@@ -17,3 +17,6 @@ class Concept(db.Model):
     def to_json_summary(self):
         keys = ["explanation"]
         return {key: value for key, value in vars(self).items() if key not in keys}
+
+    def to_json_name_only(self):
+        return {"name": self.name}

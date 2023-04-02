@@ -13,5 +13,5 @@ class Bookmark(db.Model):
     user = db.relationship("User", back_populates="bookmarks")
 
     def to_json(self):
-        keys = ["id", "user_id"]
+        keys = ["user_id"]
         return {key: value for key, value in vars(self).items() if key not in keys}
