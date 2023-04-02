@@ -2,7 +2,7 @@ from sqlalchemy.orm import joinload
 from ...models import Concept, Figure
 
 
-def find_concepts_name():
+def find_concepts_by_name():
     concepts = Concept.query.all()
     return [concept.to_json_name_only for concept in concepts]
 

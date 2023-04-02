@@ -14,7 +14,7 @@ def find_question_by_id(id):
         return None
 
 
-def find_questions_by_name(name):
+def find_question_by_name(name):
     """
     find a question with the given name with SQLAlchemy
     """
